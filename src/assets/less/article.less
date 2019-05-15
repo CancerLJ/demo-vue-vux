@@ -1,0 +1,119 @@
+/*hightlight*/
+.article_content{
+  .hljs{display:block;overflow-x:auto;padding:0.5em;color:#757575;background:#f8f8f8}
+  .hljs-comment,
+  .hljs-quote{color:#444;}
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst{color:#333;font-weight:bold}
+  .hljs-number, .hljs-literal, .hljs-variable, .hljs-template-variable, .hljs-tag .hljs-attr{color:#008080}
+  .hljs-string, .hljs-doctag{color:#d14}
+  .hljs-title,.hljs-section,.hljs-selector-id{color:#900;font-weight:bold}
+  .hljs-subst{font-weight:normal}
+  .hljs-type,.hljs-class .hljs-title{color:#458;font-weight:bold}
+  .hljs-tag,.hljs-name,.hljs-attribute{color:#000080;font-weight:normal}
+  .hljs-regexp,.hljs-link{color:#009926}
+  .hljs-symbol,.hljs-bullet{color:#990073}
+  .hljs-built_in,.hljs-builtin-name{color:#0086b3}
+  .hljs-meta{color:#999;font-weight:bold}
+  .hljs-deletion{background:#fdd}
+  .hljs-addition{background:#dfd}
+  .hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}
+
+  code {
+    padding: 2px 4px;
+    font-size: 90%;
+    /* background: #f8f8f8; */
+    color: #ce2828;
+    border-radius: 4px;
+  }
+  .highlight code {
+    background: none;
+    color: #555;
+  }
+  blockquote {
+    padding: 10px 15px;
+    font-size: initial;
+    border-left: 3px solid #d2d2d2;
+    transition: all 0.15s;
+  }
+  blockquote p:last-child,
+  blockquote ul:last-child,
+  blockquote ol:last-child {
+    margin-bottom: 0;
+  }
+  blockquote footer,
+  blockquote small,
+  blockquote .small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777777;
+  }
+  blockquote footer:before,
+  blockquote small:before,
+  blockquote .small:before {
+    content: '\2014 \00A0';
+  }
+  .blockquote-reverse,
+  blockquote.pull-right {
+    padding-right: 15px;
+    padding-left: 0;
+    border-right: 5px solid #eeeeee;
+    border-left: 0;
+    text-align: right;
+  }
+  .blockquote-reverse footer:before,
+  blockquote.pull-right footer:before,
+  .blockquote-reverse small:before,
+  blockquote.pull-right small:before,
+  .blockquote-reverse .small:before,
+  blockquote.pull-right .small:before {
+    content: '';
+  }
+  .blockquote-reverse footer:after,
+  blockquote.pull-right footer:after,
+  .blockquote-reverse small:after,
+  blockquote.pull-right small:after,
+  .blockquote-reverse .small:after,
+  blockquote.pull-right .small:after {
+    content: '\00A0 \2014';
+  }
+
+  p{
+    margin-bottom: 0px!important;
+    margin-top: 0px!important;
+    line-height: 1.8;
+  }
+  h2 {
+    padding-bottom: 6px;
+    padding-top: 6px;
+    font-size: 20px;
+  }
+  h3 {
+    padding-left: 6px;
+    margin-left: -8px;
+  }
+  pre .hljs{
+    width: 100%;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    max-height: 500px;
+    overflow-x: auto;
+    border-radius: 5px;
+  }
+  ul{
+    list-style-type: disc;
+    list-style-position:inside;
+  }
+  ol {
+    list-style-type: decimal;
+    list-style-position:inside;
+  }
+  pre code ol,
+  pre code li {
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+  }
+}
