@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
 const state = {
   title: '喵巨人',
@@ -30,5 +31,6 @@ export default new Vuex.Store({
   state,
   getters,
   mutations,
-  actions
+  actions,
+  plugins: [createPersistedState()]
 })

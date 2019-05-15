@@ -58,7 +58,6 @@ export default {
         keywords: this.value,
         time: new Date().getTime()
       })
-      console.log(this.$store.state.searchList)
       searchArticles({
         keywords: this.value,
         page: this.page,

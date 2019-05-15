@@ -10,24 +10,32 @@
             <th>时间</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-if="searchList.length>0">
           <tr v-for="(item, index) in searchList" :key="index">
             <td>{{index}}</td>
             <td>{{item.keywords}}</td>
             <td>{{item.time|formatTime}}</td>
           </tr>
         </tbody>
+        <tbody v-else>
+          <tr>
+            <td colspan="3" style="color:#999">暂无记录</td>
+          </tr>
+        </tbody>
       </x-table>
+      <box gap="20px 10px">
+        <x-button type="primary" @click.native="handleClear">清空记录</x-button>
+      </box>
     </div>
     <com-footer></com-footer>
   </div>
 </template>
 
 <script>
-import { XHeader, XTable, dateFormat } from 'vux'
+import { XHeader, XTable, dateFormat, Box, XButton } from 'vux'
 import comFooter from 'components/common/footer'
 
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 import '@/filters/formatTime'
 export default {
   filters: {
@@ -36,9 +44,17 @@ export default {
   computed: {
     ...mapGetters(['searchList'])
   },
+  methods: {
+    ...mapMutations(['setSearchList']),
+    handleClear() {
+      this.setSearchList([])
+    }
+  },
   components: {
     XHeader,
     XTable,
+    Box,
+    XButton,
     comFooter
   }
 }

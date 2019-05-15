@@ -62,7 +62,6 @@ export default {
           this.page++
           const formatList = this.formatList(res.data.list)
           this.list = flag === 0 ? formatList : this.list.concat(formatList)
-          console.log(this.list)
         } else {
           this.list = []
           // this.$refs.scroll.forceUpdate()
